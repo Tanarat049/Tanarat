@@ -1,14 +1,104 @@
 <!doctype html>
-<html lang="en">
+<html lang="th">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>tanarat</title>
+    <title>Tanarat | Welcome</title>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;500;700&display=swap" rel="stylesheet">
+    
+    <style>
+      body {
+        margin: 0;
+        padding: 1rem;
+        box-sizing: border-box;
+        font-family: 'Prompt', sans-serif;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #ffffff;
+        background: linear-gradient(rgba(15, 23, 42, 0.65), rgba(15, 23, 42, 0.85)),
+                    url('https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1920&q=80');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+      }
+
+      .glass-card {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 24px;
+        padding: 2.5rem 2rem;
+        text-align: center;
+        width: 100%;
+        max-width: 500px;
+        box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+        animation: fadeIn 1s ease-out;
+      }
+
+      h1 {
+        font-size: clamp(2.2rem, 6vw, 3rem);
+        margin: 0 0 0.5rem 0;
+        background: linear-gradient(to right, #38bdf8, #818cf8, #c084fc);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-weight: 700;
+      }
+
+      p {
+        font-size: 1.1rem;
+        color: #cbd5e1;
+        margin-bottom: 2rem;
+        font-weight: 300;
+        line-height: 1.6;
+      }
+
+      .btn {
+        background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+        color: white;
+        border: none;
+        padding: 12px 32px;
+        font-size: 1rem;
+        font-family: 'Prompt', sans-serif;
+        font-weight: 500;
+        border-radius: 50px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(139, 92, 246, 0.4);
+      }
+
+      .btn:hover {
+        transform: translateY(-3px) scale(1.05);
+        box-shadow: 0 8px 25px rgba(139, 92, 246, 0.6);
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    </style>
   </head>
   <body>
-     <h1 class="text-3xl font-bold underline">
-    Hello world!
-  </h1>
+    <div class="glass-card">
+      <h1>Hello World!</h1>
+      <p>ยินดีต้อนรับสู่พื้นที่เว็บไซต์ของ <strong>Tanarat</strong><br>เริ่มต้นสร้างสรรค์โปรเจกต์ใหม่ๆ ได้ที่นี่</p>
+      <button class="btn" onclick="sayHi()">ทักทายกันหน่อย 👋</button>
+    </div>
+
+    <script>
+      function sayHi() {
+        alert('สวัสดีครับ! ยินดีต้อนรับสู่เว็บของ Tanarat 🚀');
+      }
+    </script>
   </body>
 </html>
